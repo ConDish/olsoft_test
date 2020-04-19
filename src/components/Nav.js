@@ -6,7 +6,7 @@ export default class Navbar extends Component {
         const widthToggle = toggleNav ? "col-sm-12 col-xl-2 " : "d-xl-flex justify-content-center d-none"
         return (
 
-            <div class={`bg-primary ${widthToggle}`} id="navbar" style={{ zIndex: 1000, position: "sticky", width: !toggleNav ? 70 : "100%" }}>
+            <div class={`navbar_background ${widthToggle}`} id="navbar" style={{ zIndex: 1000, position: "sticky", width: !toggleNav ? 70 : "100%" }}>
                 <div className="pt-2">
                     <div className="d-flex">
                         <div className="mr-2" style={{ height: 30, width: 30, background: "white", borderRadius: 30 }} />

@@ -1,0 +1,31 @@
+.navbar_background {
+    background: #3b9ae2;
+    background: -moz-linear-gradient(top, #3b9ae2 0%, #1f48b0 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #3b9ae2), color-stop(100%, #1f48b0));
+    background: -webkit-linear-gradient(top, #3b9ae2 0%, #1f48b0 100%);
+    background: -o-linear-gradient(top, #3b9ae2 0%, #1f48b0 100%);
+    background: -ms-linear-gradient(top, #3b9ae2 0%, #1f48b0 100%);
+    background: linear-gradient(to bottom, #3b9ae2 0%, #1f48b0 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b9ae2', endColorstr='#1f48b0', GradientType=0 );
+}
+
+.btn-primary {
+    background-color: #1B3FA3;
+    border-color: #1B3FA3;
+}
+
+.text-primary {
+    color: #1B3FA3 !important;
+}
+
+.btn-filter {
+    background: rgba(139,194,71,1);
+    border-color: rgba(139,194,71,1);
+    background: -moz-linear-gradient(left, rgba(139,194,71,1) 0%, rgba(100,155,33,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(139,194,71,1)), color-stop(100%, rgba(100,155,33,1)));
+    background: -webkit-linear-gradient(left, rgba(139,194,71,1) 0%, rgba(100,155,33,1) 100%);
+    background: -o-linear-gradient(left, rgba(139,194,71,1) 0%, rgba(100,155,33,1) 100%);
+    background: -ms-linear-gradient(left, rgba(139,194,71,1) 0%, rgba(100,155,33,1) 100%);
+    background: linear-gradient(to right, rgba(139,194,71,1) 0%, rgba(100,155,33,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8bc247', endColorstr='#649b21', GradientType=1 );
+}

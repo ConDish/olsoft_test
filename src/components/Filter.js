@@ -113,7 +113,7 @@ export default class Filter extends Component {
                         <Input type="text" name="email" onChange={this.onChange} value={this.state.email} />
                     </FormGroup>
                     <Col className="row justify-content-between">
-                        <Button color="success" onClick={this.onClick} >Filtrar</Button>
+                        <Button className="btn-filter" onClick={this.onClick} >Filtrar</Button>
                         <Button color="success" outline onClick={this.onClear}>Limpiar</Button>
                     </Col>
                 </Form>
