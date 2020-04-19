@@ -42,7 +42,7 @@ export default class Home extends Component {
                 <Row className="flex-xl-nowrap">
                     <Nav context={this} />
                     <Col className="m-0 p-0">
-                        <nav className="navbar bg-white m-0" style={{ height: 60 }}>
+                        <nav className="navbar bg-white m-0" style={{ height: 59 }}>
                             <i class="fas fa-bars text-primary" style={{ fontSize: 20 }} onClick={() => this.setState({ toggleNav: !this.state.toggleNav })}></i>
                             <Col xl="5" className="d-none d-sm-block">
                                 <h4 className="text-primary">Prueba Front-end</h4>
