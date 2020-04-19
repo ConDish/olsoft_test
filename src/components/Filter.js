@@ -17,63 +17,40 @@ export default class Filter extends Component {
     onChange = (event) => this.setState({ [event.target.name]: event.target.value })
 
 
-    onClick = async (event) => {
-        event.preventDefault()
-        let users = []
-        await db.collection("usuarios").get().then(snapShots => {
-            users = snapShots.docs.map(doc => {
-                return { id: doc.id, data: doc.data() }
-            })
+  onClick = async (event) => {
+    event.preventDefault()
+    let users = []
+    await db.collection("usuarios").get().then(snapShots => {
+        users = snapShots.docs.map(doc => {
+            return { id: doc.id, data: doc.data() }
         })
+    })
 
-        const { status } = this.state
+    const { 
+        tel, 
+        identifi, 
+        rol,
+        password,
+        last_name,
+        status,
+        email,
+        name, 
+    } = this.state
 
-        let notNull = []
-        let response = []
+    let response = []
 
-        Object.keys(this.state).forEach((key) => {
-            if (this.state[key] !== "") {
-                notNull.push(key)
-            }
-        })
+    response = users.map(user => user)
+        .filter(user => user.name.includes(name))
+        .filter(user => user.tel.includes(tel))
+        .filter(user => user.identifi.includes(identifi))
+        .filter(user => user.rol.includes(rol))
+        .filter(user => user.password.includes(password))
+        .filter(user => user.last_name.includes(last_name))
+        .filter(user => user.email.includes(email))
+        .filter(user => user.status == status)
 
-        if (notNull.length > 1) {
-
-            users.filter(val => {
-                notNull.forEach(key => {
-                    if (val.data[key].includes) {
-                        if (val.data[key].includes(this.state[key])) {
-                            if (status === "1") {
-                                if (val.data.status === true) {
-                                    response.push({ id: val.id, data: val.data })
-                                }
-                            } else {
-                                if (val.data.status === false) {
-                                    response.push({ id: val.id, data: val.data })
-                                }
-                            }
-                        }
-                    }
-                })
-            })
-        } else {
-            users.filter(val => {
-                if (status === "1") {
-                    if (val.data.status === true) {
-                        response.push({ id: val.id, data: val.data })
-                    }
-                } else {
-                    if (val.data.status === false) {
-                        response.push({ id: val.id, data: val.data })
-                    }
-                }
-            })
-        }
-
-        this.props.context.setState({ users: response })
-
-
-    }
+    this.props.context.setState({ users: response })
+}
 
     onClear = (event) => {
         event.preventDefault()
