@@ -1,6 +1,6 @@
 Este proyecto tiene como objetivo realizar una prueba de ingreso
 
-## Available Scripts
+## Scrips Activos
 
 En el proyecto puedes iniciar el proyecto con:
 
