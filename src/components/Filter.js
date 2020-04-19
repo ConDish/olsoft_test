@@ -40,14 +40,14 @@ export default class Filter extends Component {
     let response = []
 
     response = users.map(user => user)
-        .filter(user => user.name.includes(name))
-        .filter(user => user.tel.includes(tel))
-        .filter(user => user.identifi.includes(identifi))
-        .filter(user => user.rol.includes(rol))
-        .filter(user => user.password.includes(password))
-        .filter(user => user.last_name.includes(last_name))
-        .filter(user => user.email.includes(email))
-        .filter(user => user.status == status)
+        .filter(user => user.data.name.includes(name))
+        .filter(user => user.data.tel.includes(tel))
+        .filter(user => user.data.identifi.includes(identifi))
+        .filter(user => user.data.rol.includes(rol))
+        .filter(user => user.data.password.includes(password))
+        .filter(user => user.data.last_name.includes(last_name))
+        .filter(user => user.data.email.includes(email))
+        .filter(user => user.data.status == status)
 
     this.props.context.setState({ users: response })
 }
