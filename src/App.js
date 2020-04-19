@@ -4,9 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes />
-    </BrowserRouter>
+    <h1>Hello World</h1>
   )
 }
 
