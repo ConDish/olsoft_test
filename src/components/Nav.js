@@ -34,8 +34,8 @@ export default class Navbar extends Component {
                         <p className={`${!toggleNav && "d-xl-none"} m-0 p-0 text-white`}>Roles</p>
 
                     </div>
-                    <div className={`d-flex align-items-center my-3 ${!toggleNav && "justify-content-center"}`}>
-                        <p className="m-0 p-0 text-white mr-3" style={{ fontSize: 25, fontWeight: "bold", background: "rgba(255,255,255,0.3)", padding: "0px 5px 0px 5px", borderRadius: "5px", cursor: "pointer" }}>U</p>
+                    <div className={`d-flex align-items-center my-3 ${!toggleNav && "justify-content-center"}`} style={{ background: "rgba(255,255,255,0.3)", borderRadius: "5px", cursor: "pointer"}}>
+                        <p className="m-0 p-0 text-white mr-3" style={{ fontSize: 25, fontWeight: "bold" }}>U</p>
                         <p className={`${!toggleNav && "d-xl-none"} m-0 p-0 text-white`}>Usuario</p>
                     </div>
 
